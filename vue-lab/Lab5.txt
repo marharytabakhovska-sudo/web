@@ -1,0 +1,68 @@
+Лабораторна 5. Інтеграція Tailwind CSS у проєкт Vue 3 та рефакторинг стилів.
+
+
+    1. Кроки інсталяції та налаштування Tailwind CSS
+
+1. Встановила Tailwind та Vite-плагін:
+
+   npm install -D tailwindcss @tailwindcss/vite
+
+2. Додала Tailwind plugin у vite.config.ts:
+
+   import tailwindcss from "@tailwindcss/vite";
+   plugins: [vue(), tailwindcss()]
+
+3. Створила файл `src/assets/css/index.css` з єдиним імпортом:
+
+   @import "tailwindcss";
+
+4. Підключила CSS у `main.ts`:
+
+   import "./assets/css/index.css";
+
+5. Видалила старі <style scoped> у компонентах та перейшла на Tailwind класи.
+
+    2. Реалізація умовних стилів у UserCard.vue
+
+Для компоненту UserCard я замінила CSS-класи на Tailwind і додала умовну логіку:
+
+<div 
+  class="border p-4 mt-3 rounded-lg shadow-sm"
+  :class="isActive 
+      ? 'border-green-500 bg-green-50' 
+      : 'border-gray-300 bg-white'"
+>
+
+
+Tailwind дозволив легко керувати стилями через зміну класів у :class — без власного CSS.
+
+    3. Переваги та недоліки utility-first (Tailwind)
+
+Переваги:
+
+Не потрібно писати власний CSS — весь стиль у шаблоні.
+Багато готових класів (padding, margins, кольори, flex і т.д.).
+Дуже швидка розробка та простий рефакторинг.
+Зручні умовні стилі через `:class`.
+Легко робити темну тему (`dark:`).
+
+Недоліки:
+
+Багато класів у розмітці, HTML стає "ширшим".
+Потрібен час, щоб запам’ятати назви класів.
+Важче писати унікальну стилізацію, яку немає у Tailwind.
+Іноді логіка зовнішнього вигляду змішується з шаблоном.
+
+4. (Бонус) Темна тема
+
+Додала класи з `dark:` для UserCard, наприклад:
+
+<div 
+  :class="isActive 
+    ? 'border-green-500 bg-green-50 dark:bg-green-900' 
+    : 'border-gray-300 bg-white dark:bg-gray-800'"
+>
+
+Темна тема працює коректно.
+
+
