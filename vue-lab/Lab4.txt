@@ -1,0 +1,58 @@
+Звіт по лабораторній №4 (Vue 3 + TypeScript + Vue Router)
+
+    1. Виконані кроки
+
+1. Створила новий проєкт за допомогою команди:
+
+npm create vue@latest vue-lab
+
+Обрала опції: TypeScript — Yes, Vue Router — Yes, ESLint — Yes, Prettier — Yes.
+
+2. Встановила залежності та запустила проєкт:
+
+cd vue-lab
+npm install
+npm run dev
+
+3. Ознайомилася зі структурою: `main.ts`, `router/index.ts`, `App.vue`, `views/`, `components/`.
+
+4. Створила нову сторінку `ContactView.vue` у `/src/views/`.
+
+5. Додала новий маршрут у `src/router/index.ts`:
+
+   {
+     path: '/contact',
+     name: 'contact',
+     component: () => import('../views/ContactView.vue')
+   }
+
+6. Додала нове навігаційне посилання `<RouterLink to="/contact">Contact</RouterLink>` у `App.vue`.
+
+7. Створила компонент `UserCard.vue` з типізованими пропсами:
+   defineProps<{
+     username: string,
+     isActive: boolean
+   }>()
+
+8. Підключила компонент у `ContactView.vue` та передала пропси.
+
+9. Перевірила роботу типізації та отримала помилку при неправильному типі.
+
+Текст помилки (вставлений як коментар у коді)
+<!-- <UserCard username="Student_Error" :isActive="100" /> -->
+<!-- Помилка Vue: Type 'number' is not assignable to type 'boolean'. -->
+
+Висновки
+
+Використання TypeScript у Vue дозволяє:
+
+виявляти помилки ще під час написання коду;
+робити компоненти надійнішими завдяки строгій типізації;
+покращує автодоповнення та роботу IDE.
+
+Використання Vue Router дає:
+можливість створювати SPA без перезавантаження сторінки;
+чітку структуру сторінок та маршрутизації;
+легке додавання нових маршрутів і компонентів.
+
+
