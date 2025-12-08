@@ -1,0 +1,194 @@
+/*
+  Цей файл містить стилі, які ПРИМУСОВО ізолюють Dating App від основного сайту.
+  Він застосовується тільки коли на body є клас .dating-mode.
+*/
+
+/* 1. ГЛОБАЛЬНЕ СКИДАННЯ */
+body.dating-mode {
+  display: block !important;
+  place-items: unset !important;
+  background-color: var(--color-bg-main) !important;
+  font-family: var(--font-lato) !important;
+  color: var(--color-text-main) !important;
+  line-height: normal !important;
+}
+
+body.dating-mode #app {
+  display: block !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  max-width: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  grid-template-columns: none !important;
+}
+
+body.dating-mode a,
+body.dating-mode a:hover,
+body.dating-mode a:visited,
+body.dating-mode a:active {
+  color: inherit !important;
+  text-decoration: none !important;
+  background-color: transparent !important;
+  padding: 0 !important;
+  transition: none !important;
+}
+
+
+body.dating-mode a.text-white { color: white !important; }
+body.dating-mode a.text-primary { color: var(--color-primary) !important; }
+body.dating-mode a.text-text-main { color: var(--color-text-main) !important; }
+
+
+body.dating-mode .tab-btn {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  transition: all 0.4s ease-in-out !important;
+}
+
+body.dating-mode .tab-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dating-mode button {
+  color: inherit !important;
+}
+
+body.dating-mode .the-frame-container {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+body.dating-mode .auth-header {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+body.dating-mode .logo-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+}
+
+body.dating-mode .heart-logo {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+body.dating-mode .onboarding-content {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+  width: 100% !important;
+}
+
+body.dating-mode .title-box {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  text-align: center !important;
+  display: inline-block !important;
+  width: auto !important;
+}
+
+body.dating-mode h1,
+body.dating-mode h3 {
+  font-weight: inherit !important;
+  text-align: inherit !important;
+}
+
+body.dating-mode .bottom-text a {
+  font-weight: 700 !important;
+  color: white !important;
+  text-decoration: none !important;
+}
+body.dating-mode .bottom-text a:hover {
+  text-decoration: underline !important;
+}
+
+body.dating-mode a.btn-skip {
+  background-color: var(--color-bg-light) !important;
+  color: var(--color-text-main) !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dating-mode a.btn-skip:hover {
+  background-color: var(--color-bg-light-hover) !important;
+}
+
+body.dating-mode button.btn-next {
+  background-color: var(--color-primary) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  transition: all 0.3s ease !important;
+}
+
+body.dating-mode button.btn-next:hover {
+  background-color: var(--color-primary-hover) !important;
+}
+
+body.dating-mode .title-box {
+  margin-bottom: 40px !important;
+}
+
+body.dating-mode .description {
+  color: #5a5a64 !important;
+  opacity: 1 !important;
+}
+
+body.dating-mode .auth-header {
+  padding-top: 50px !important;
+  padding-bottom: 35px !important;
+}
+
+body.dating-mode .logo-container {
+  margin-bottom: 35px !important;
+}
+
+body.dating-mode .form {
+  gap: 16px !important;
+  padding-top: 25px !important;
+}
+
+body.dating-mode .forgot-link {
+  margin-top: -8px !important;
+  margin-bottom: 0px !important;
+}
+
+body.dating-mode .form > a[href="#"] + button,
+body.dating-mode .form button[type="submit"] {
+  margin-top: 8px !important;
+}
+
+body.dating-mode .bottom-text {
+  margin-top: 12px !important;
+}
+
+
+body.dating-mode .the-frame-container {
+  align-items: center !important;
+  overflow-y: auto !important;
+}
+
+body.dating-mode .form-container {
+  min-height: auto !important;
+}
+
+body.dating-mode .tab-buttons {
+  margin-bottom: 0px !important;
+}
